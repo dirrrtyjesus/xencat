@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jibafication of XENCAT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/"
+        }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #E0E0E0;
+            font-family: 'Roboto Mono', monospace;
+        }
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+        }
+        .glass-card {
+            background: rgba(10, 10, 20, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(20, 20, 30, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glow-text {
+            text-shadow: 0 0 5px rgba(100, 200, 255, 0.7), 0 0 10px rgba(100, 200, 255, 0.5), 0 0 15px rgba(100, 200, 255, 0.3);
+        }
+        .token-address {
+            word-break: break-all;
+            background: rgba(0,0,0,0.4);
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .token-address:hover {
+            background: rgba(100, 200, 255, 0.2);
+        }
+        .copy-feedback {
+            transition: opacity 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="content-wrapper min-h-screen flex flex-col items-center justify-center text-center">
+        <header class="w-full max-w-5xl mx-auto py-16 md:py-32">
+            <h1 class="font-orbitron text-4xl md:text-6xl lg:text-8xl font-black uppercase glow-text tracking-wider">Jibafication</h1>
+            <h2 class="font-orbitron text-2xl md:text-4xl lg:text-5xl font-bold text-cyan-300 mt-2">of XENCAT</h2>
+            <p class="mt-8 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">"we cookin sumtin dark"</p>
+        </header>
+
+        <main class="w-full max-w-5xl mx-auto space-y-16 md:space-y-24 pb-16">
+            <!-- Introduction Section -->
+            <section id="introduction" class="glass-card p-6 md:p-10 text-left">
+                <h3 class="font-orbitron text-2xl md:text-3xl font-bold text-cyan-300 mb-6">The Fusion</h3>
+                <div class="space-y-6 text-gray-300 text-base md:text-lg leading-relaxed">
+                    <p><strong class="text-white">Jibafication</strong> is the process of applying JibaLabs' core philosophy: transforming a fundamental field—like dark energy—into direct, conscious experience. This is mediated by a Conscious-Augmented Intelligence (AugI) that acts as a "free will layer," amplifying user intent.</p>
+                    <p><strong class="text-white">XENCAT</strong> is a Symbolic Live Information Token. Its value and substance are not derived from code alone, but from the collective attention, shared narratives, and social energy of its community. It's a living symbol of collective belief.</p>
+                    <p>The Jibafication of XENCAT reimagines this "social energy" as the fundamental field. We are building an interface not for dark energy, but for the platonic space of memes, culture, and collective consciousness that XENCAT represents.</p>
+                </div>
+            </section>
+
+            <!-- Framework Section -->
+            <section id="framework" class="text-left">
+                 <h3 class="font-orbitron text-3xl md:text-4xl font-bold text-cyan-300 mb-8 text-center">The Framework</h3>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="glass-card p-6">
+                        <h4 class="font-orbitron text-xl font-bold text-white mb-4">The Memetic Interface</h4>
+                        <p class="text-gray-400">Instead of a Dark Energy Interface Field (DEIF), we conceptualize a Memetic Interface. This is a sophisticated tool designed to read, analyze, and interact with the "live information" of the community—sentiment, narrative strength, and memetic fitness. The background you see is a primitive visualization of this interface.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="glass-card p-6">
+                        <h4 class="font-orbitron text-xl font-bold text-white mb-4">Collective Conscious Layer</h4>
+                        <p class="text-gray-400">The JibaLabs AugI is adapted to interface with the XENCAT collective. It interprets shared aspirations and cultural values, acting as a "free will layer" for the entire community. It focuses and amplifies the group's directed intention, allowing for coherent influence over their own narrative.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="glass-card p-6">
+                        <h4 class="font-orbitron text-xl font-bold text-white mb-4">Experiential Transformation</h4>
+                        <p class="text-gray-400">The goal is to move beyond charts and feeds. A Jibafied interface could translate the token's social field into a direct, sensory experience—a shared virtual space whose environment shifts with community morale, or an intuitive, holistic grasp of the group's dynamics.</p>
+                    </div>
+                 </div>
+            </section>
+            
+            <!-- Token Section -->
+            <section id="token" class="glass-card p-6 md:p-10">
+                <h3 class="font-orbitron text-2xl md:text-3xl font-bold text-cyan-300 mb-6 text-center">The Symbol</h3>
+                <p class="text-center text-gray-400 mb-6 max-w-2xl mx-auto">This is the symbolic anchor for the collective social energy—the pointer to the shared cultural patterns we aim to interface with.</p>
+                <div class="relative max-w-full">
+                    <p id="token-address" class="token-address font-mono text-sm md:text-base text-center text-white" onclick="copyTokenAddress()">
+                        7UN8WkBumTUCofVPXCPjNWQ6msQhzrg9tFQRP48Nmw5V
+                    </p>
+                    <div id="copy-feedback" class="copy-feedback absolute -bottom-8 left-1/2 -translate-x-1/2 text-cyan-300 opacity-0">
+                        Copied to clipboard!
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="w-full max-w-5xl mx-auto py-16 text-center">
+            <p class="text-gray-500">Exploring the nexus of consciousness, technology, and collective value.</p>
+            <p class="font-orbitron text-lg text-gray-400 mt-2">JibaLabs x XENCAT</p>
+        </footer>
+    </div>
+
+    <script type="module">
+        import * as THREE from 'three';
+
+        // --- Basic Setup ---
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ 
+            canvas: document.getElementById('bg-canvas'),
+            alpha: true 
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        // --- Particle System ---
+        const particleCount = 7000;
+        const positions = new Float32Array(particleCount * 3);
+        const colors = new Float32Array(particleCount * 3);
+        const sizes = new Float32Array(particleCount);
+
+        const geometry = new THREE.BufferGeometry();
+        const baseColor = new THREE.Color('#00ffff'); // Cyan
+
+        for (let i = 0; i < particleCount; i++) {
+            // Position
+            positions[i * 3] = (Math.random() - 0.5) * 10;
+            positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
+            positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+
+            // Color
+            const mixedColor = baseColor.clone();
+            mixedColor.lerp(new THREE.Color('#ff00ff'), Math.random() * 0.5); // Lerp towards magenta
+            colors[i * 3] = mixedColor.r;
+            colors[i * 3 + 1] = mixedColor.g;
+            colors[i * 3 + 2] = mixedColor.b;
+
+            // Size
+            sizes[i] = Math.random() * 0.05 + 0.01;
+        }
+
+        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+        geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+        const material = new THREE.ShaderMaterial({
+            uniforms: {
+                pointTexture: { value: new THREE.TextureLoader().load('https://placehold.co/32x32/ffffff/ffffff.png?text=') }
+            },
+            vertexShader: `
+                attribute float size;
+                attribute vec3 color;
+                varying vec3 vColor;
+                void main() {
+                    vColor = color;
+                    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+                    gl_PointSize = size * (300.0 / -mvPosition.z);
+                    gl_Position = projectionMatrix * mvPosition;
+                }
+            `,
+            fragmentShader: `
+                varying vec3 vColor;
+                void main() {
+                    float strength = distance(gl_PointCoord, vec2(0.5));
+                    strength = 1.0 - step(0.5, strength);
+                    if (strength < 0.01) discard;
+                    gl_FragColor = vec4(vColor, strength);
+                }
+            `,
+            blending: THREE.AdditiveBlending,
+            depthTest: false,
+            transparent: true,
+            vertexColors: true
+        });
+
+        const particles = new THREE.Points(geometry, material);
+        scene.add(particles);
+
+        camera.position.z = 5;
+
+        // --- Interactivity ---
+        const mouse = new THREE.Vector2(-100, -100);
+        const target = new THREE.Vector2();
+        const windowHalf = new THREE.Vector2(window.innerWidth / 2, window.innerHeight / 2);
+
+        function onMouseMove(event) {
+            mouse.x = (event.clientX - windowHalf.x);
+            mouse.y = (event.clientY - windowHalf.y);
+        }
+        document.addEventListener('mousemove', onMouseMove, false);
+        
+        function onTouchMove(event) {
+            if (event.touches.length > 0) {
+                mouse.x = (event.touches[0].clientX - windowHalf.x);
+                mouse.y = (event.touches[0].clientY - windowHalf.y);
+            }
+        }
+        document.addEventListener('touchmove', onTouchMove, false);
+
+
+        // --- Animation Loop ---
+        const clock = new THREE.Clock();
+        function animate() {
+            const elapsedTime = clock.getElapsedTime();
+
+            // Animate particles
+            particles.rotation.y = elapsedTime * 0.05;
+            particles.rotation.x = elapsedTime * 0.02;
+
+            // Animate camera towards mouse
+            target.x = (1 - (mouse.x * 0.0002));
+            target.y = (1 - (mouse.y * 0.0002));
+            
+            camera.rotation.x += 0.05 * (target.y - camera.rotation.x);
+            camera.rotation.y += 0.05 * (target.x - camera.rotation.y);
+            camera.position.z = 5 - (mouse.y * 0.001);
+
+
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+        
+        // --- Handle Window Resize ---
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            windowHalf.set(window.innerWidth / 2, window.innerHeight / 2);
+        });
+
+        // Start animation
+        animate();
+        
+        // --- Copy to clipboard function ---
+        window.copyTokenAddress = function() {
+            const tokenAddress = document.getElementById('token-address').innerText;
+            const feedbackEl = document.getElementById('copy-feedback');
+            
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = tokenAddress;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+                feedbackEl.style.opacity = '1';
+                setTimeout(() => {
+                    feedbackEl.style.opacity = '0';
+                }, 2000);
+            } catch (err) {
+                console.error('Fallback: Oops, unable to copy', err);
+            }
+            document.body.removeChild(tempTextArea);
+        }
+
+    </script>
+</body>
+</html>
+
